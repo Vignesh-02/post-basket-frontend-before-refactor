@@ -1,0 +1,2 @@
+1. Make sure that the path mentioned in App.js
+path="new " is incorrect and it should be path="new"
