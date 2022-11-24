@@ -1,2 +1,8 @@
 1. Make sure that the path mentioned in App.js
 path="new " is incorrect and it should be path="new"
+
+2. it is import { memo } from 'react' not
+ import { memo } from 'React'
+
+ 3. network requests are not the same as redux subscriptions
+ rtk query helps in making lesser network requests
