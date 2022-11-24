@@ -12,7 +12,7 @@ const Prefetch = () => {
     // const users = store.dispatch(usersApiSlice.endpoints.getUsers.initiate())
 
     store.dispatch(notesApiSlice.util.prefetch('getNotes','notesList',{ force: true }))
-    store.dispatch(usersApiSlice.util.prefetch('getNUsers','usersList',{ force: true }))
+    store.dispatch(usersApiSlice.util.prefetch('getUsers','usersList',{ force: true }))
 
     },[])
 
