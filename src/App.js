@@ -14,7 +14,6 @@ import Prefetch from './features/auth/Prefetch';
 import PersistLogin from './features/auth/PersistLogin'
 import { ROLES } from './config/roles'
 import RequireAuth from './features/auth/RequireAuth';
-import userTitle from './hooks/useTitle'
 import useTitle from './hooks/useTitle';
 
 function App() {

@@ -3,9 +3,14 @@ import { useNavigate } from "react-router-dom"
 import { useAddNewNoteMutation } from "./notesApiSlice"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from "@fortawesome/free-solid-svg-icons"
+import useAuth from '../../hooks/useAuth'
 
 const NewNoteForm = ({ users }) => {
 
+    const { username } = useAuth()
+    const currentUser = users.filter(user => user.username === username)
+    const currentUserId = currentUser[0]._id
+    
     const [addNewNote, {
         isLoading,
         isSuccess,
@@ -17,7 +22,7 @@ const NewNoteForm = ({ users }) => {
 
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
-    const [userId, setUserId] = useState(users[0].id)
+    const [userId, setUserId] = useState(currentUserId)
 
     useEffect(() => {
         if (isSuccess) {

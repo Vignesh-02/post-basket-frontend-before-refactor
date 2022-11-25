@@ -11,7 +11,6 @@ const useAuth = () => {
     if (token) {
         const decoded = jwtDecode(token)
         const { username, roles } = decoded.UserInfo
-
         isManager = roles.includes('Manager')
         isAdmin = roles.includes('Admin')
 

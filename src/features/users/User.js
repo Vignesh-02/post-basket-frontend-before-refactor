@@ -6,7 +6,7 @@ import { memo } from 'react'
 
 const User = ({ userId }) => {
 
-    const user = useGetUsersQuery('usersList', {
+    const { user } = useGetUsersQuery('usersList', {
         selectFromResult: ({ data }) => ({
             user: data?.entities[userId]
         }),
@@ -16,7 +16,6 @@ const User = ({ userId }) => {
 
     if (user) {
         const handleEdit = () => navigate(`/dash/users/${userId}`)
-
         const userRolesString = user.roles.toString().replaceAll(',', ', ')
 
         const cellStatus = user.active ? '' : 'table__cell--inactive'

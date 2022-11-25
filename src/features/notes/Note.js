@@ -11,7 +11,7 @@ const Note = ({ noteId }) => {
             note: data?.entities[noteId]
         })
     })
-
+    
     const navigate = useNavigate()
 
     if (note) {

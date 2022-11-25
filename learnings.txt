@@ -5,4 +5,7 @@ path="new " is incorrect and it should be path="new"
  import { memo } from 'React'
 
  3. network requests are not the same as redux subscriptions
- rtk query helps in making lesser network requests
+ rtk query helps in making lesser network requests.
+
+ 4. While fetching users, we get it from { user } property  object which is present inside the object 
+ received from the useGetUsersQuery, which contains the properties user and refetch.
